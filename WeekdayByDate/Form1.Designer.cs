@@ -101,7 +101,7 @@
             this.resultTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.resultTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.resultTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.resultTextBox.Location = new System.Drawing.Point(138, 250);
+            this.resultTextBox.Location = new System.Drawing.Point(136, 250);
             this.resultTextBox.Name = "resultTextBox";
             this.resultTextBox.Size = new System.Drawing.Size(135, 25);
             this.resultTextBox.TabIndex = 6;

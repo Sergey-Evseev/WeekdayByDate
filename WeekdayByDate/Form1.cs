@@ -8,19 +8,11 @@ namespace WeekdayByDate
         public Form1()
         {
             InitializeComponent();
-            
-            //inputTextBox.Enter += TextBoxEnter;
-            //inputTextBox.Enter += TextBoxEnter;
-
             buttonOK.Click += OKClick;
             buttonClear.Click += ClearClick;
-        }
-
-        //обработчик нажатия enter на текст боксе ??????
-        private void TextBoxEnter(object sender, EventArgs e)
-        {
-            inputTextBox.BackColor = Color.White;
-        }
+           //inputTextBox.KeyDown += new KeyEventHandler(inputTextBox_KeyDown);
+            inputTextBox.KeyDown += inputTextBox_KeyDown;
+        }        
 
         //обработчик кнопки OK
         private void OKClick(object sender, EventArgs e)
@@ -62,6 +54,13 @@ namespace WeekdayByDate
             inputTextBox.BackColor = Color.White; //фон поля ввода сделать снова белым
             dateTimePicker.Value = DateTime.Now; //пикер даты установить на treobq день
         }
-
+        //обработчик нажатия enter на поле ввода
+        private void inputTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                OKClick(buttonOK, e);
+            }
+        }
     } //end of: public partial class Form1 : Form
 }
