@@ -1,3 +1,6 @@
+/*Lesson 3. Task 6. Написать программу, которая по введенной дате
+определяет день недели. Результат выводить в текстовое поле (желательно по-русски).*/
+
 namespace WeekdayByDate
 {
     public partial class Form1 : Form
@@ -5,6 +8,60 @@ namespace WeekdayByDate
         public Form1()
         {
             InitializeComponent();
+            
+            //inputTextBox.Enter += TextBoxEnter;
+            //inputTextBox.Enter += TextBoxEnter;
+
+            buttonOK.Click += OKClick;
+            buttonClear.Click += ClearClick;
         }
-    }
+
+        //обработчик нажатия enter на текст боксе ??????
+        private void TextBoxEnter(object sender, EventArgs e)
+        {
+            inputTextBox.BackColor = Color.White;
+        }
+
+        //обработчик кнопки OK
+        private void OKClick(object sender, EventArgs e)
+        {
+            if (inputTextBox.Text == "") //если в бокс ничего не введено
+            {
+                resultTextBox.Text = //преобр. знач-я dateTimePicker к полнму дню недели
+                    dateTimePicker.Value.Date.ToString("dddd").ToUpper();
+                //в htpekmnfn вывести выбранную в пикере дату в коротком формате (dd.mm.yyyy):
+                inputTextBox.Text = dateTimePicker.Value.ToShortDateString();
+            }
+            else
+            {
+                try
+                {
+                    DateTime day = new DateTime();
+                    //попробовать спарсить текст из бокса к объекту DateTime:
+                    day = DateTime.Parse(inputTextBox.Text);
+                    //в результат вывести преобразование даты к полному дню недели:
+                    resultTextBox.Text = day.ToString("dddd").ToUpper();
+                    //установить пикер на введенной дате:
+                    dateTimePicker.Value = day;
+                }
+                catch(Exception)
+                {                    
+                    MessageBox.Show("Неверный формат даты!", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    inputTextBox.BackColor = Color.LightCoral;
+                }
+            } //end of: else
+        } //end of: private void OKClick()
+        
+        //обработчик кнопки CLEAR 
+        private void ClearClick(object sender, EventArgs e)
+        {
+            inputTextBox.Clear(); //очистка поля ввода
+            resultTextBox.Clear(); //очистка поля вывода
+            inputTextBox.BackColor = Color.White; //фон поля ввода сделать снова белым
+            dateTimePicker.Value = DateTime.Now; //пикер даты установить на treobq день
+        }
+
+    } //end of: public partial class Form1 : Form
 }

@@ -44,16 +44,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(88, 9);
+            this.label1.Location = new System.Drawing.Point(63, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 17);
+            this.label1.Size = new System.Drawing.Size(261, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Define week day by entered date";
+            this.label1.Text = "ОПЕРЕДЕЛЕНИЕ ДНЯ НЕДЕЛИ ПО ДАТЕ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 36);
+            this.label2.Location = new System.Drawing.Point(63, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(266, 17);
             this.label2.TabIndex = 1;
@@ -61,15 +61,18 @@
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Location = new System.Drawing.Point(138, 74);
+            this.inputTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.inputTextBox.Location = new System.Drawing.Point(136, 78);
+            this.inputTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.Size = new System.Drawing.Size(135, 25);
             this.inputTextBox.TabIndex = 2;
+            this.inputTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(138, 118);
+            this.label3.Location = new System.Drawing.Point(138, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 17);
             this.label3.TabIndex = 3;
@@ -77,16 +80,17 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(138, 154);
+            this.dateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker.Location = new System.Drawing.Point(129, 154);
             this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(135, 25);
+            this.dateTimePicker.Size = new System.Drawing.Size(152, 25);
             this.dateTimePicker.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(108, 207);
+            this.label4.Location = new System.Drawing.Point(108, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(187, 17);
             this.label4.TabIndex = 5;
@@ -96,6 +100,7 @@
             // 
             this.resultTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.resultTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.resultTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.resultTextBox.Location = new System.Drawing.Point(138, 250);
             this.resultTextBox.Name = "resultTextBox";
             this.resultTextBox.Size = new System.Drawing.Size(135, 25);
@@ -105,22 +110,24 @@
             // buttonOK
             // 
             this.buttonOK.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonOK.Location = new System.Drawing.Point(63, 295);
+            this.buttonOK.Location = new System.Drawing.Point(88, 299);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(101, 35);
+            this.buttonOK.Size = new System.Drawing.Size(83, 27);
             this.buttonOK.TabIndex = 7;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.OKClick);
             // 
             // buttonClear
             // 
             this.buttonClear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonClear.Location = new System.Drawing.Point(228, 295);
+            this.buttonClear.Location = new System.Drawing.Point(228, 299);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(101, 35);
+            this.buttonClear.Size = new System.Drawing.Size(71, 31);
             this.buttonClear.TabIndex = 8;
             this.buttonClear.Text = "CLEAR";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.ClearClick);
             // 
             // Form1
             // 
